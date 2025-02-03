@@ -15,13 +15,14 @@ alias = "first_role"
 assume_role {
   role_arn = "arn:aws:iam::070839874981:role/mw-test-role2"
 }
-  #access_key = var.access_key
-  #secret_key = var.secret_key
+
 }
 
 provider "aws" {
 region = "ap-northeast-2"
 alias = "second_role"
+  access_key = var.access_key
+  secret_key = var.secret_key
 
   assume_role {
     role_arn     = "arn:aws:iam::637423635224:role/mw-assume-role"
@@ -29,6 +30,6 @@ alias = "second_role"
 
 }
 
-#variable "access_key" {}
-#variable "secret_key" {}
+variable "access_key" {}
+variable "secret_key" {}
 
