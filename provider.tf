@@ -10,17 +10,25 @@ terraform {
 
 provider "aws" {
   region = "ap-northeast-2"
+alias = "first_role"
 
 assume_role {
   role_arn = "arn:aws:iam::070839874981:role/mw-test-role2"
 }
-assume_role {
-    role_arn     = "arn:aws:iam::637423635224:role/mw-assume-role"
-}
-  access_key = var.access_key
-  secret_key = var.secret_key
+  #access_key = var.access_key
+  #secret_key = var.secret_key
 }
 
-variable "access_key" {}
-variable "secret_key" {}
+provider "aws" {
+region = "ap-northeast-2"
+alias = "second_role"
+
+  assume_role {
+    role_arn     = "arn:aws:iam::637423635224:role/mw-assume-role"
+}
+
+}
+
+#variable "access_key" {}
+#variable "secret_key" {}
 
