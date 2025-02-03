@@ -6,7 +6,7 @@ module "vpc" {
   }
 }
 
-
+/*
 resource "aws_vpc" "change" {
 provider = aws.second_role
   cidr_block       = "10.15.0.0/16"
@@ -18,5 +18,6 @@ provider = aws.second_role
     Name =  "scvit-vpc-ch2"
   }
 }
+*/
 
 
