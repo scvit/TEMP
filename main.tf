@@ -1,4 +1,12 @@
 
+module "vpc" {
+ source = "./vpc_module"
+  providers = {
+    aws = aws.second_role
+  }
+}
+
+
 resource "aws_vpc" "change" {
 provider = aws.second_role
   cidr_block       = "10.15.0.0/16"
