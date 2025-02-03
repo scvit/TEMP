@@ -1,6 +1,6 @@
 
 module "vpc" {
- source = "./vpc_module"
+ source = "./vpc"
   providers = {
     aws = aws.second_role
   }
