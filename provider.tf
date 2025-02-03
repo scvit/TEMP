@@ -17,6 +17,6 @@ provider "aws" {
 assume_role {
     role_arn     = "arn:aws:iam::637423635224:role/mw-assume-role"
 }
-#  access_key = var.access_key
-#  secret_key = var.secret_key
+  access_key = var.access_key
+  secret_key = var.secret_key
 }
