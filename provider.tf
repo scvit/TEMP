@@ -11,9 +11,9 @@ terraform {
 provider "aws" {
   region = "ap-northeast-2"
 
-#assume_role {
-#  role_arn = "arn:aws:iam::070839874981:role/mw-test-role2"
-#}
+assume_role {
+  role_arn = "arn:aws:iam::070839874981:role/mw-test-role2"
+}
 assume_role {
     role_arn     = "arn:aws:iam::637423635224:role/mw-assume-role"
 }
