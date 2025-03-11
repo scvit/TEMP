@@ -7,6 +7,6 @@ resource "aws_vpc" "change" {
   enable_dns_hostnames = true # route 53 dns하려면 필요 
 
   tags = {
-    Name =  "scvit-vpc-ch5"
+    Name =  "scvit-vpc-ch"
   }
 }
