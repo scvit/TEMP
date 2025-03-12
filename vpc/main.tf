@@ -10,3 +10,15 @@ resource "aws_vpc" "change" {
     Name =  "scvit-vpc-ch"
   }
 }
+
+resource "aws_vpc" "change2" {
+
+  cidr_block       = "10.25.0.0/16"
+  instance_tenancy = "default"
+
+  enable_dns_hostnames = true # route 53 dns하려면 필요 
+
+  tags = {
+    Name =  "scvit-vpc-ch2"
+  }
+}
